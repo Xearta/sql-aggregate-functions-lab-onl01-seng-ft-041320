@@ -6,6 +6,7 @@ describe "aggregate functions sql" do
     @db = SQLite3::Database.new(':memory:')
     SQLRunner.make_methods
     @sql_runner = SQLRunner.new(@db)
+    puts @sql_runner.methods
     @sql_runner.execute_sql_create
     @sql_runner.execute_sql_insert
   end
